@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/css/style.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" >
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900" rel="stylesheet">
     <title>ohmyfood</title>
 </head>
 <body>
 
     <!--Animation-->
-    <div class="load-wrapper">
+    <div>
     </div>
     <!--Fin Animation-->
 
@@ -19,10 +22,10 @@
     <!--Fin Header-->
 
     <!--Localisation-->
-    <section class="localisation">
+    <div class="localisation">
         <i class="fas fa-map-marker-alt"></i>
         <p class="localisation-text">Paris, Belleville</p>
-    </section>
+    </div>
     <!--Fin Localisation-->
 
     <!--Introduction-->
@@ -34,15 +37,122 @@
     <!--Fin Introduction-->
 
     <!--Fonctionnement-->
-    <section>
-
+    <section class="Fonctionnement">
+        <h2 class="title">Fonctionnement</h2>
+        <div class="Fonctionnement-box">
+            <!-- Element 1 -->
+            <div class="Fonctionnement-box-item">
+                <p class="Fonctionnement-box-item-number">1</p>
+                <div class="Fonctionnement-box-item-desc">
+                    <i class="Fonctionnement-box-item-desc-icon fas fa-mobile-alt"></i>
+                    <p class="Fonctionnement-box-item-desc-text">Choississez un restaurant</p>
+                </div>
+            </div>
+            <!-- Element 2 -->
+            <div class="Fonctionnement-box-item">
+                <p class="Fonctionnement-box-item-number">2</p>
+                <div class="Fonctionnement-box-item-desc">
+                    <i class="Fonctionnement-box-item-desc-icon fas fa-list-ul"></i>
+                    <p class="Fonctionnement-box-item-desc-text">Composez votre menu</p>
+                </div>
+            </div>
+            <!-- Element 3 -->
+            <div class="Fonctionnement-box-item">
+                <p class="Fonctionnement-box-item-number">3</p>
+                <div class="Fonctionnement-box-item-desc">
+                    <i class="Fonctionnement-box-item-desc-icon fas fa-store"></i>
+                    <p class="Fonctionnement-box-item-desc-text">Dégustez au restaurant</p>
+                </div>
+            </div>
+        </div>    
     </section>
-    <!--Fin Fonctionnement-->
+<!-- Fin Fonctionnement -->
 
+<!-- Début Thumbnail Restaurant -->
+<section class="restaurant">
+    <h2 class="title">Restaurants</h2>
+    <div class="restaurant-box">
+        <!-- thumbnail 1 -->
+        <div class="restaurant-thumbnail">
+            <a href="html/palette.html">
+                <img class="restaurant-thumbnail-img" src="public/img/restaurants/palette.jpg" width="500"  alt="miam miam">
+                <p class="flag-new">Nouveau</p>
+            <div class="restaurant-thumbnail-desc">
+                <h3 class="restaurant-thumbnail-name">La palette du goût</h3>
+                <p class="restaurant-thumbnail-ville">Ménilmontant</p>
+            </div>
+            </a>
+            <i class="restaurant-thumbnail-icon far fa-heart heart">
+                <i class="fas fa-heart heart-color"></i>  
+            </i>
+        </div>
+        <!-- thumbnail 2 -->
+        <div class="restaurant-thumbnail">
+            <a href="html/note.html">
+                <img class="restaurant-thumbnail-img" src="public/img/restaurants/note.jpg" width="500"  alt="miam miam">
+                <p class="flag-new">Nouveau</p>
+            <div class="restaurant-thumbnail-desc">
+                <h3 class="restaurant-thumbnail-name">La note enchantée</h3>
+                <p class="restaurant-thumbnail-ville">Charonne</p>
+            </div>
+            </a>
+            <i class="restaurant-thumbnail-icon far fa-heart heart">
+                <i class="fas fa-heart heart-color"></i>  
+            </i>
+        </div> 
+        <!-- thumbnail 3 -->  
+        <div class="restaurant-thumbnail">
+            <a href="html/francaise.html">
+                <img class="restaurant-thumbnail-img" src="public/img/restaurants/francaise.jpg" width="500"  alt="miam miam">
+            <div class="restaurant-thumbnail-desc">
+                <h3 class="restaurant-thumbnail-name"><span>à</span> la française</h3>
+                <p class="restaurant-thumbnail-ville">Cité Rouge</p>
+            </div>
+            </a>
+            <i class="restaurant-thumbnail-icon far fa-heart heart">
+                <i class="fas fa-heart heart-color"></i>  
+            </i>
+        </div>  
+        <!-- thumbnail 4 -->
+        <div class="restaurant-thumbnail">
+            <a href="html/delice.html">
+                <img class="restaurant-thumbnail-img" src="public/img/restaurants/delice.jpg" width="500"  alt="miam miam">
+            <div class="restaurant-thumbnail-desc">
+                <h3 class="restaurant-thumbnail-name">Le délice des sens</h3>
+                <p class="restaurant-thumbnail-ville">Folie-Méricourt</p>
+            </div>
+            </a>
+            <i class="restaurant-thumbnail-icon far fa-heart heart">
+                <i class="fas fa-heart heart-color"></i>  
+            </i>
+        </div>
+    </div>                  
+</section>
+<!-- Fin Thumbnail Restaurant -->
 
-
-
-
+<!-- Debut Footer -->
+<footer class="footer">
+<div class="footer-box">
+    <div class="footer-logo">
+        <p>ohmyfood</p>
+    </div>
+    <div class="footer-restaurant">
+        <a href="#" class="footer-text">
+            <i class="footer-text-icon fas fa-utensils"></i>
+            <p>Proposer un restaurant</p>
+        </a>
+        <a href="#" class="footer-text">
+            <i class="footer-text-icon fas fa-hands-helping"></i>
+            <p>Devenir partenaire</p>
+        </a>
+    </div>
+    <div class="footer-contact">
+        <a href="#" class="footer-text"><p >Mentions légales</p></a>
+        <a href="mailto:contact@ohmyfood.fr" class="footer-text"><p>Contact</p></a>
+    </div>
+</div>
+</footer>
+<!-- Fin Footer -->
 
 </body>
 </html>
