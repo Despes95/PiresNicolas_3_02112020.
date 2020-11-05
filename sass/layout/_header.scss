@@ -1,3 +1,27 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+
+/*Alignement du header*/
+header { 
+    text-align: center;
+}
+
+/*logo du header*/
+.header-logo {
+    /*taille de la police*/
+    font-size: 30px;
+    /*alignement du texte*/
+    text-align: center;
+    /*Police du logo*/
+    font-family: shrikhand;
+    /*hauteur du logo*/
+    padding: 5px 0;
+    /*Mise en Position relative*/
+    position: relative;
+    /*application de l'ombre, trop foncer penser a faire une autre
+    variable pour une shadow secondaire*/
+    box-shadow: $shadow;
+    
+
+} 
