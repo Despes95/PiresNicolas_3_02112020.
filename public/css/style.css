@@ -83,9 +83,187 @@ th:not([align]) {
   text-align: left;
 }
 
+/**
+ * Basic typography style for copy text
+ */
+/*Police Generale roboto sauf title*/
+html {
+  font-family: roboto;
+}
+
+/*Police Generale Shrikhand title*/
+.title {
+  font-family: Shrikhand;
+}
+
 /* Utils */
+/*couleur primaire*/
+/*couleur secondaire*/
+/*couleur tertiare*/
+/*couleur du fond Paris, Bellevile*/
+/*couleur du fond introduction*/
+/*couleur des boutons introduction*/
+/*couleur icon des .fas des boutons introduction*/
+/* Shadows */
+/*Ombres generale a voir si besoin de plusieurs*/
+.Fonctionnement-box-item-number, .introduction, .localisation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Shadow */
+.Fonctionnement-box-item, .btn {
+  box-shadow: 3px 3px 6px black;
+}
+
 /* Layouts */
+/*Alignement du header*/
+header {
+  text-align: center;
+}
+
+/*logo du header*/
+.header-logo {
+  /*taille de la police*/
+  font-size: 30px;
+  /*alignement du texte*/
+  text-align: center;
+  /*Police du logo*/
+  font-family: shrikhand;
+  /*hauteur du logo*/
+  padding: 5px 0;
+  /*Mise en Position relative*/
+  position: relative;
+  /*application de l'ombre, trop foncer penser a faire une autre
+  variable pour une shadow secondaire*/
+  box-shadow: 3px 3px 6px black;
+}
+
 /* Composants */
+/*Bouton "Explorer nos restaurants"*/
+.btn {
+  /*arrondie du bouton*/
+  border-radius: 50px;
+  /*couleur de la police*/
+  color: white;
+  /*taille police*/
+  font-size: 15px;
+  /*taille epaisseur police*/
+  font-weight: 500;
+  /*taille du bouton*/
+  padding: 15px 30px;
+  /*top bottom autour du bouton*/
+  margin: 20px auto 30px;
+  /*fusion des couleurs*/
+  background: linear-gradient(#9356DC, #FF79DA);
+  /*application de l'ombre*/
+}
+
 /* Pages */
+/* tous les liens*/
+a {
+  /*couleur des liens*/
+  color: black;
+  /*enlever la barre des liens*/
+  text-decoration: none;
+}
+
+/* Titre */
+.title {
+  /*taille de la police*/
+  font-size: 1.5rem;
+  /*epaisseur de la police*/
+  font-weight: 700;
+  /*espacement top bottom titre*/
+  padding: 2rem 0 2rem;
+}
+
+/*localisation*/
+.localisation {
+  /*fonction flex centrer*/
+  /*couleur fond paris, belleville*/
+  background-color: #eee8e8;
+  /*hauteur de 1rem*/
+  padding: 1rem 0;
+  /*localisation-icon*/
+  /*localisation-text*/
+}
+.localisation-icon {
+  /*decalage de localisation-icon*/
+  margin-right: 1rem;
+}
+.localisation-text {
+  /*taille et epaisseur police*/
+  font-weight: 500;
+  /*taille et epaisseur police*/
+  font-size: 1rem;
+}
+
+/*Fin de localisation*/
+/*Introduction*/
+.introduction {
+  flex-direction: column;
+  text-align: center;
+  background-color: #d4c3c3;
+  padding: 2.5rem 0;
+}
+.introduction-title {
+  width: 70%;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.introduction-para {
+  width: 80%;
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin: 0.5rem 0 1rem 0;
+}
+
+/* Fonctionnement */
+.Fonctionnement {
+  /*largeur maximun des boutons*/
+  max-width: 1440px;
+  /*position des boutons*/
+  margin: auto;
+  /*Fonctionnement-box*/
+}
+.Fonctionnement-box {
+  display: flex;
+  flex-direction: column;
+}
+.Fonctionnement-box-item {
+  display: flex;
+  align-items: center;
+  background-color: #e6c6c6;
+  padding: 1.7rem 1.5rem;
+  margin-left: 0.5rem;
+  border-radius: 25px;
+  position: relative;
+  margin-bottom: 1.5rem;
+  transition: 0.3s;
+}
+.Fonctionnement-box-item-number {
+  position: absolute;
+  left: -0.7rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50px;
+  background: #9356DC;
+  color: white;
+  font-size: 0.9rem;
+}
+.Fonctionnement-box-item-desc {
+  display: flex;
+  align-items: center;
+}
+.Fonctionnement-box-item-desc-icon {
+  margin: 0 1.5rem 0 0.7rem;
+  color: #2f73c2;
+  font-size: 1.3rem;
+}
+.Fonctionnement-box-item-desc-text {
+  font-weight: 700;
+}
 
 /*# sourceMappingURL=style.css.map */
