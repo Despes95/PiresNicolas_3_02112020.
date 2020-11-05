@@ -1,0 +1,19 @@
+/*Bouton "Explorer nos restaurants"*/
+.btn {
+    /*arrondie du bouton*/
+    border-radius: 50px;
+    /*couleur de la police*/
+    color: white;
+    /*taille police*/
+    font-size: 15px;
+    /*taille epaisseur police*/
+    font-weight: 500;
+    /*taille du bouton*/
+    padding: 15px 30px;
+    /*top bottom autour du bouton*/
+    margin:  20px auto 30px;
+    /*fusion des couleurs*/
+    background: linear-gradient($couleur-primaire, $couleur-secondaire);
+    /*application de l'ombre*/
+    @extend %shadow;
+}
