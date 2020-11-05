@@ -1,0 +1,85 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+/* tous les liens*/
+a {
+    /*couleur des liens*/
+    color: black;
+    
+    
+    /*enlever la barre des liens*/
+    text-decoration: none;
+}
+
+/*localisation*/
+.localisation {
+    /*fonction flex centrer*/
+    @extend %flex-centrer;
+    /*couleur fond paris, belleville*/
+    background-color: $localisation;
+    /*hauteur de la bande paris, belleville*/
+    padding: 15px 0;
+    
+    /*localisation-icon*/
+    &-icon {
+        /*decalage de localisation-icon*/
+        padding-right: 15px;
+    }
+
+    /*localisation-text*/
+    &-text {
+        /*taille et epaisseur police*/
+        font-weight: 500;
+        /*taille et epaisseur police*/
+        font-size: 16px;
+    }
+}
+/*Fin de localisation*/
+
+/* Titre */
+.title {
+    /*taille de la police*/
+    font-size: 24px;
+    /*epaisseur de la police*/
+    font-weight: 700;
+    /*espacement top bottom titre*/
+    padding: 40px 0 20px;
+    /*alignement du titre du moins pour la version desktop*/
+    text-align: center;
+}
+
+/*Introduction*/
+.introduction {
+    /*fonction flex centrer*/
+    @extend %flex-centrer;
+    /*Mise en colonne*/
+    flex-direction: column;
+    /*centrage du texte*/
+    text-align: center;
+    /*Couleur du fond introduction, couleur temporaire*/
+    background-color: $introduction;
+    /*top et bottom introduction*/
+    padding: 40px 0px 20px 0px;
+    /*section titre introduction*/
+    &-title {
+        /*largeur en pourccentage de titre*/
+        width: 70%;
+        /*taille police*/
+        font-size: 24px;
+        /*epaisseur police*/
+        font-weight: 700;
+    }
+    /*section paragraphe introduction*/
+    &-para {
+        /*largeur en pourccentage du paragraphe*/
+        width: 80%;
+        /*taille police*/
+        font-size: 16px;
+        /*epaisseur police*/
+        font-weight: 300;
+        /*Positionement du paragraphe*/
+        margin: 10px 0 15px 0;
+    }
+}
+
