@@ -1,26 +1,18 @@
 // -----------------------------------------------------------------------------
-// This file contains styles that are specific to the home page.
+// This file contains styles that are specific to the index page.
 // -----------------------------------------------------------------------------
 
-/* tous les liens*/
-a {
-    /*couleur des liens*/
-    color: black;
-    
-    
-    /*enlever la barre des liens*/
-    text-decoration: none;
-}
+
 
 /*localisation*/
 .localisation {
     /*fonction flex centrer*/
-    @extend %flex-centrer;
+    @include flex-centrer;
     /*couleur fond paris, belleville*/
     background-color: $localisation;
     /*hauteur de la bande paris, belleville*/
     padding: 15px 0;
-    
+
     /*localisation-icon*/
     &-icon {
         /*decalage de localisation-icon*/
@@ -35,6 +27,7 @@ a {
         font-size: 16px;
     }
 }
+
 /*Fin de localisation*/
 
 /* Titre */
@@ -45,14 +38,18 @@ a {
     font-weight: 700;
     /*espacement top bottom titre*/
     padding: 40px 0 20px;
+
     /*alignement du titre du moins pour la version desktop*/
-    text-align: center;
+    @include xl {
+        text-align: center;
+    }
+
 }
 
 /*Introduction*/
 .introduction {
     /*fonction flex centrer*/
-    @extend %flex-centrer;
+    @include flex-centrer;
     /*Mise en colonne*/
     flex-direction: column;
     /*centrage du texte*/
@@ -60,7 +57,8 @@ a {
     /*Couleur du fond introduction, couleur temporaire*/
     background-color: $introduction;
     /*top et bottom introduction*/
-    padding: 40px 0px 20px 0px;
+    padding: 40px 0px 50px 0px;
+
     /*section titre introduction*/
     &-title {
         /*largeur en pourccentage de titre*/
@@ -70,6 +68,7 @@ a {
         /*epaisseur police*/
         font-weight: 700;
     }
+
     /*section paragraphe introduction*/
     &-para {
         /*largeur en pourccentage du paragraphe*/
@@ -83,3 +82,240 @@ a {
     }
 }
 
+/* Fonctionnement */
+.Fonctionnement {
+    /*largeur maximun des boutons a redefir si besoin*/
+    max-width: 1440px;
+    /*position des boutons*/
+    margin: 0 auto;
+    /*padding*/
+    padding: 16px 19px 40px 19px;
+    @include md {
+        margin: 100px;
+    }
+    @include xl {
+        padding-top: 16px;
+        margin: auto,
+    }
+
+    /*Fonctionnement-box*/
+    &-box {
+        @include flex-column;
+        
+        @include xl {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        /*Fonctionnement-box-item*/
+        &-item {
+            display: flex;
+            /*centrage de l'ensemble*/
+            align-items: center;
+            /*couleur du fond des item-box, couleur provisoire*/
+            background-color: $fonctionnment;
+            /*espacement des item box*/
+            margin-left: 8px;
+            /*dimension des item-box*/
+            padding: 24px 8px;
+
+            margin-bottom: 8px;
+            /*arrondis des item box*/
+            border-radius: 25px;
+            /*position relative*/
+            position: relative;
+            /*ombre*/
+            box-shadow: $shadow;
+
+            @include xl {
+                width: 360px;
+                padding: 8px 24px;
+                margin-right: 20px;
+            }
+
+            &:hover {
+                background: #f5edff;
+                box-shadow: $shadow;
+                @include bounce;
+                cursor: pointer;
+            }
+
+            &:hover .Fonctionnement-box-item-desc-icon {
+                color: #464242;
+            }
+
+            /*Fonctionnement-box-item-number*/
+            &-number {
+                /*variable centrage*/
+                @include flex-centrer;
+                /*position absolute du number*/
+                position: absolute;
+                /*position decalage du number sur la gauche du number*/
+                left: -10px;
+                /*largeur du rond du number*/
+                width: 24px;
+                /*hateur du rond du number*/
+                height: 24px;
+                /*radius de 50px*/
+                border-radius: 50px;
+                /*application de la couleur primaire du number*/
+                background: $couleur-primaire;
+                /*couleur de la police du number*/
+                color: white;
+                /*taille de la police du number*/
+                font-size: 14px;
+            }
+
+            /*Fonctionnement-box-item-desc*/
+            &-desc {
+                display: flex;
+                align-items: center;
+
+                /*Fonctionnement-box-item-desc-icon*/
+                &-icon {
+                    /*espacement icon*/
+                    margin: 0 20px 0 15px;
+                    /*couleur icon provisoire*/
+                    color: $fonctionnment-icon;
+                    /*taille des icones*/
+                    font-size: 18px;
+                }
+
+                /*Fonctionnement-box-item-desc-text*/
+                &-text {
+                    /*epaisseur de la police*/
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+
+
+/* Début Thumbnail Restaurant */
+.restaurant {
+    /*application couleur du fond restaurant*/
+    background: $restaurant;
+    /*padding de la classe restaurant*/
+    padding: 0 19px 50px;
+    @include md {
+        padding: 100px;
+    }
+    @include xl {
+        padding-top: 16px;
+        margin: auto;
+    }
+
+    /*restaurant-box*/
+    &-box {
+        @include flex-column;
+
+        @include xl {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        /*Dimension Max restaurant-box*/
+        max-width: 1440px;
+        /*emplacement restaurant-box*/
+        margin: 0 auto;
+
+
+    }
+
+    /*restaurant-thumbnail*/
+    &-thumbnail {
+        /*couleur du background des thumbail*/
+        background: white;
+        /*border radius*/
+        border-radius: 30px;
+        /*position relative*/
+        position: relative;
+        /*espacement bottom*/
+        margin-bottom: 20px;
+        /*application de shadow*/
+        box-shadow: $shadow;
+        overflow: hidden;
+        @include xl {
+            margin-top: 40px;
+            width: 330px;
+        }
+        &:hover {
+            @include bounce;
+            box-shadow: $shadow;
+        }
+
+        /*restaurant-thumbnail-img*/
+        &-img {
+            /*place de l'image dans la div*/
+            width: 100%;
+            /*hauteur de l'image*/
+            height: 180px;
+            object-fit: cover;
+            border-radius: 30px 30px 0px 0px;
+        }
+
+        /*restaurant-thumbnail-desc*/
+        &-desc {
+            /*padding du texte*/
+            padding: 20px 20px;
+        }
+
+        /*restaurant-thumbnail-name*/
+        &-name {
+            /*taille de la police*/
+            font-size: 18px;
+            /*epaisseur de la police*/
+            font-weight: 900;
+        }
+
+        /*restaurant-thumbnail-ville*/
+        &-ville {
+            /*taille de la police*/
+            font-size: 16px;
+        }
+    }
+}
+
+
+
+
+@media screen and (min-width: 900px) and (max-width: 1379px) {
+
+    .title {
+        text-align: center;
+    }
+
+    .Fonctionnement {
+        padding-top: 16px;
+
+        &-box {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+
+        }
+    }
+
+    .restaurant {
+        padding-top: 16px;
+
+        &-box {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin: 0;
+        }
+        &-thumbnail {
+            margin-bottom: 20px;
+            margin-top: 40px;
+            width: 330px;
+            
+        }
+        
+    }
+}

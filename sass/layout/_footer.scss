@@ -1,3 +1,68 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+
+.footer{
+    /*couleur du fond footer*/
+    background: $footer;
+    
+    &-box{
+        /*taille max*/
+        max-width: 1440px;
+        /*margin*/
+        margin: 0 auto;
+        display: flex;
+        /*Mise en colonne*/
+        flex-direction: column;
+        padding: 20px 20px;
+        
+        @include md {
+            width: 95%;
+            flex-direction: row;
+            align-items: baseline;
+            justify-content: space-between;
+            padding: 60px 0px 40px 0px;
+        }
+        
+    }
+    /*footer-logo*/
+    &-logo{
+        color: white;
+        font-size: 18px;
+        margin-bottom: 10px;
+        font-family: Shrikhand;
+    }
+
+    &-logo:hover {
+        @include bounce;
+    }
+    
+
+    &-text{
+        display: flex;
+        /*alignement des elements*/
+        align-items: center;
+        /*taille de la police*/
+        font-size: 16px;
+        /*couleur de la police*/
+        color: white;
+        /*interligne*/
+        line-height: 25px;
+        /*footer-text-icon*/
+        &:hover {
+            color: $couleur-secondaire;
+        }
+        &-icon.fas.fa-hands-helping{
+            /*taille de la fas*/
+            font-size: 12px;
+            /*decalage sur la droite*/
+            padding-right: 12px;
+        }
+        &-icon.fas.fa-utensils{
+            /*taille de la fas*/
+            font-size: 15px;
+            /*decalage sur la droite*/
+            padding-right: 15px;
+        }
+    }
+}

@@ -1,0 +1,187 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the menus page.
+//
+
+
+
+
+
+/*Section Top*/
+.top {
+    position: relative;
+
+    & img {
+        /*toute la page*/
+        width: 100%;
+        /*largeur de la photo*/
+        height: 300px;
+        /*ratio photo*/
+        object-fit: cover;
+    }
+
+    &-title {
+        position: absolute;
+        @include flex-between;
+        bottom: 0px;
+        margin: 0 auto;
+        /*positionement top-title*/
+        padding: 32px 32px 12px 32px;
+        /*taille top-title*/
+        max-width: 1440px;
+        width: 100%;
+        /*couleur top-title*/
+        background: $restaurant;
+        font-size: 26px;
+        /*arrondis*/
+        border-top-left-radius: 40px;
+        /*arrondis*/
+        border-top-right-radius: 40px;
+        /*type de fonts*/
+        font-family: "Shrikhand";
+
+        @include lg {
+            position: relative;
+            background: white;
+        }
+    }
+
+    &-position {
+        position: relative;
+        margin-right: 40px;
+        margin-top: 46px;
+    }
+}
+
+
+
+/* Section Menu */
+.menu {
+    /*couleur fond*/
+    background: $restaurant;
+    max-width: 1440px;
+    margin: 0 auto;
+    @include flex-column;
+    /*positionemnt interieur*/
+    padding: 24px 32px 20px 32px;
+    @include ipad {
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+    @include lg {
+        background: white;
+    }
+    @include xl {
+        margin: auto;
+    }
+}
+
+.greenbar {
+    font-size: 17px;
+    /*Mise en majuscule*/
+    text-transform: uppercase;
+    /*position relative*/
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/*barre verte en dessous h2*/
+.greenbar:before {
+    content: "";
+    width: 40px;
+    height: 3px;
+    background: #99E2D0;
+    position: absolute;
+    bottom: -5px;
+}
+
+.meal {
+    background: white;
+    border-radius: 20px;
+    width: 100%;
+    margin: 16px auto;
+    display: flex;
+    box-shadow: $shadow;
+    cursor: pointer;
+    position: relative;
+    /*pour cacher l'animation*/
+    overflow: hidden;
+
+    &:hover .meal-icon {
+        width: 13%;
+    }
+
+    &:hover .fa-check-circle {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+
+    &-item {
+        /*postionement de l'animation*/
+        flex-grow: 1;
+        position: relative;
+        /*padding*/
+        padding: 12px;
+        /*interligne*/
+        line-height: 20px;
+        @include text-overflow;
+    }
+
+    &-title {
+        font-weight: 500;
+        font-size: 17px;
+        @include text-overflow;
+
+    }
+
+    &-para {
+        font-size: 14px;
+        width: 80%;
+        /*pas de retour ligne et supression texte en trop*/
+        @include text-overflow;
+
+    }
+
+    &-para b {
+        /*position absolute*/
+        position: absolute;
+        font-size: 14px;
+        font-weight: 700;
+        right: 16px;
+        bottom: 12px;
+    }
+
+    &-icon {
+        @include flex-centrer;
+        background-color: $couleur-tertiaire;
+        /*partie animation*/
+        width: 0%;
+        transition: 1s;
+
+        & .fa-check-circle {
+            /*mise en opacity*/
+            color: white;
+            font-size: 18px;
+            /*vitesse de rotation icon*/
+            transform: rotate(980deg);
+            transition: .8s;
+        }
+    }
+}
+
+/*Animation du menu*/
+.anim1 {
+    animation: slideUp 1000ms 1s ease-in-out both;
+}
+
+.anim2 {
+    animation: slideUp 1000ms 1.5s ease-in-out both;
+}
+
+.anim3 {
+    animation: slideUp 1000ms 2s ease-in-out both;
+}
+
+/*div pour le bounton commande*/
+.position {
+    @include flex-between-row;
+}

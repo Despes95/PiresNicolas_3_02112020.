@@ -15,9 +15,14 @@
 
 /* Composants */
 @import "components/_button.scss";
+@import "components/_a.scss";
+@import "components/_back.scss";
+@import "components/_pop-up.scss";
+@import "components/_heart.scss";
+@import "components/_ball.scss";
 
 /* Pages */
 @import "pages/_index.scss";
-@import "pages/_menus.scss";
-@import "pages/_medias-queries.scss";
+@import "pages/menus";
+
 

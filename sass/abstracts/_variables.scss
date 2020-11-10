@@ -9,17 +9,42 @@ $couleur-secondaire : #FF79DA;
 /*couleur tertiare*/
 $couleur-tertiaire : #99E2D0;
 /*couleur du fond Paris, Bellevile*/ 
-$localisation : #eee8e8;
+$localisation : #eaeaea;
 /*couleur du fond introduction*/
-$introduction : #d4c3c3;
+$introduction : #faf6f6;
 /*couleur des boutons introduction*/
-$fonctionnment : #e6c6c6;
+$fonctionnment : #faf6f6;
 /*couleur icon des .fas des boutons introduction*/
-$fonctionnment-icon : #2f73c2;
-
+$fonctionnment-icon : #a5a1a1;
+/*couleur du fond restaurant*/
+$restaurant : #f6f6f6;
+/*couleur de la police du fond nouveau*/
+$nouveau : #289f82;
+/*couleur du fond du footer*/
+$footer :#353535;
 
 /* Shadows */
 /*Ombres generale a voir si besoin de plusieurs*/
-$shadow : 3px 3px 6px black;
+$shadow : 3px 3px 6px #a5a1a1;
+$shadow-noir : 0px 3px 8px #837f7f;
+
+/*Responsive*/
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+ 
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+ 
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+//ipad Pro//
+$screen-ipad-min: 1024px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+
 
 
