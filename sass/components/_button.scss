@@ -17,9 +17,17 @@
     /*taille du bouton*/
     padding: 15px 30px;
     /*top bottom autour du bouton*/
-    margin:  20px auto 30px;
+    margin: 20px auto 30px;
     /*fusion des couleurs*/
     background: linear-gradient($couleur-primaire, $couleur-secondaire);
     /*application de l'ombre*/
     box-shadow: $shadow;
+    cursor: pointer;
+
+    &:hover {
+        @include bounce-btn
+    }
 }
+
+
+

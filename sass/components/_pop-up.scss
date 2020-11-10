@@ -1,0 +1,22 @@
+.nouveau {
+    /*application couleur tertiaire*/
+    background: $couleur-tertiaire;
+    /*couleur de la police provisoire*/
+    color: $nouveau;
+    /*epaisseur de la police*/
+    font-weight: 700;
+    /*arrondis du bandeau nouveau*/
+    border-radius: 3px;
+    /*position absolute*/
+    position: absolute;
+    /*position haute*/
+    top: 20px;
+    /*position droite*/
+    right: 20px;
+    /*padding nouveau*/
+    padding: 10px 15px;
+
+    &:hover {
+        @include bounce
+    }
+}

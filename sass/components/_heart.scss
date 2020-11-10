@@ -1,0 +1,35 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the heart component.
+// -----------------------------------------------------------------------------
+
+
+.restaurant-thumbnail,
+.top-title {
+    & .fas.fa-heart {
+        /*Position absolute*/
+        position: absolute;
+        /*positionement hauteur*/
+        margin-top: -50px;
+        /*positionement a partir de la gauche*/
+        margin-left: 85%;
+        /*taille de icon*/
+        font-size: 30px;
+        /*taille et color contour*/
+        -webkit-text-stroke: 1px black;
+        /*rendre invisible interieur*/
+        color: transparent;
+
+        &:hover {
+            /*couleur primaire lors du hover*/
+            background: $couleur-primaire;
+            /*limitation de la couleur au contour*/
+            -webkit-background-clip: text;
+            background-clip: text;
+            /*ajout taille contour et couleur*/
+            -webkit-text-stroke: 3px $couleur-primaire;
+            /*Ajout cursor*/
+            cursor: pointer;
+            @include bounce
+        }
+    }
+}

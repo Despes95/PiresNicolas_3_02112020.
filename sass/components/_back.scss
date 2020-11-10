@@ -1,0 +1,19 @@
+// -----------------------------------------------------------------------------
+// This file contains arrow back.
+// -----------------------------------------------------------------------------
+
+.back {
+  position: absolute;
+  /*decalage sur la droite*/
+  left: 30px;
+  /*decalage a partir du haut*/
+  top: 22px;
+  /*taille icon*/
+  font-size: 22px;
+  /*ajout cursor */
+  cursor: pointer;
+
+  &:hover {
+    color: $couleur-primaire;
+  }
+}
