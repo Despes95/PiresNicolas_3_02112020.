@@ -38,20 +38,20 @@
         border-top-right-radius: 40px;
         /*type de fonts*/
         font-family: "Shrikhand";
-
         @include lg {
             position: relative;
             background: white;
         }
+        @include ipad {
+            padding: 20px 110px;
+        }
+        @include xl {
+            margin: 50px auto;
+            
+        }
     }
-
-    &-position {
-        position: relative;
-        margin-right: 40px;
-        margin-top: 46px;
-    }
+    
 }
-
 
 
 /* Section Menu */
@@ -71,7 +71,16 @@
         background: white;
     }
     @include xl {
-        margin: auto;
+        display: flex;
+        flex-direction: row;
+        margin:0 auto;
+        
+
+    }
+    &-general {
+        @include xl {
+            margin: auto;
+        } 
     }
 }
 
@@ -105,7 +114,10 @@
     position: relative;
     /*pour cacher l'animation*/
     overflow: hidden;
-
+    @include xl {
+        margin-bottom: 40px;
+        
+    }
     &:hover .meal-icon {
         width: 13%;
     }
@@ -124,6 +136,9 @@
         /*interligne*/
         line-height: 20px;
         @include text-overflow;
+        @include xl {
+            width: 320px;
+        }
     }
 
     &-title {

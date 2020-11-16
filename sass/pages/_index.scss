@@ -91,7 +91,7 @@
     /*padding*/
     padding: 16px 19px 40px 19px;
     @include md {
-        margin: 100px;
+        margin: 0 100px;
     }
     @include xl {
         padding-top: 16px;
@@ -202,7 +202,7 @@
     /*padding de la classe restaurant*/
     padding: 0 19px 50px;
     @include md {
-        padding: 100px;
+        margin: 0 100px;
     }
     @include xl {
         padding-top: 16px;
@@ -277,6 +277,12 @@
         &-ville {
             /*taille de la police*/
             font-size: 16px;
+        }
+        &-icon{
+            position: absolute;
+            font-size: 29px;
+            bottom: 20px;
+            right: 25px;
         }
     }
 }

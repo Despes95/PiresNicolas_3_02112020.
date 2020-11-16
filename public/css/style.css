@@ -107,6 +107,15 @@ html {
 /*Ombres generale a voir si besoin de plusieurs*/
 /*Responsive*/
 /* Responsive*/
+/*animation du coeur*/
+@keyframes fondu_heart {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /*animation menu*/
 @keyframes slideUp {
   0% {
@@ -258,7 +267,8 @@ html {
   /*arrondie du bouton*/
   border-radius: 50px;
   /*enlever le border*/
-  border: 0;
+  outline: none;
+  border: none;
   /*couleur de la police*/
   color: white;
   /*taille police*/
@@ -330,42 +340,43 @@ a {
   transition: 0.4s;
 }
 
-.restaurant-thumbnail .fas.fa-heart,
-.top-title .fas.fa-heart {
-  /*Position absolute*/
+#position {
+  display: flex;
+  left: 85%;
   position: absolute;
-  /*positionement hauteur*/
-  margin-top: -50px;
-  /*positionement a partir de la gauche*/
-  margin-left: 85%;
-  /*taille de icon*/
+  bottom: 10%;
+}
+
+.like {
+  position: relative;
+}
+
+.like .heart {
+  color: #3f3f3f;
+}
+
+.like:hover .like-2 {
+  animation: fondu_heart 1600ms;
+  animation-fill-mode: forwards;
+}
+
+.like-2 {
+  color: #9356DC;
+  position: absolute;
+  top: 0px;
+  opacity: 0;
+}
+
+i.far.fa-heart {
   font-size: 30px;
-  /*taille et color contour*/
-  -webkit-text-stroke: 1px black;
-  /*rendre invisible interieur*/
-  color: transparent;
 }
-.restaurant-thumbnail .fas.fa-heart:hover,
-.top-title .fas.fa-heart:hover {
-  /*couleur primaire lors du hover*/
-  background: #9356DC;
-  /*limitation de la couleur au contour*/
-  -webkit-background-clip: text;
-  background-clip: text;
-  /*ajout taille contour et couleur*/
-  -webkit-text-stroke: 3px #9356DC;
-  /*Ajout cursor*/
-  cursor: pointer;
-  text-decoration: none;
-}
-.restaurant-thumbnail .fas.fa-heart:hover:hover,
-.top-title .fas.fa-heart:hover:hover {
-  transform: scale(1.1);
-  transition: 0.4s;
+
+i.fas.fa-heart {
+  font-size: 30px;
 }
 
 .load-wrapper {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -531,7 +542,7 @@ a {
 }
 @media (min-width: 768px) {
   .Fonctionnement {
-    margin: 100px;
+    margin: 0 100px;
   }
 }
 @media (min-width: 1200px) {
@@ -645,7 +656,7 @@ a {
 }
 @media (min-width: 768px) {
   .restaurant {
-    padding: 100px;
+    margin: 0 100px;
   }
 }
 @media (min-width: 1200px) {
@@ -722,6 +733,12 @@ a {
   /*taille de la police*/
   font-size: 16px;
 }
+.restaurant-thumbnail-icon {
+  position: absolute;
+  font-size: 29px;
+  bottom: 20px;
+  right: 25px;
+}
 
 @media screen and (min-width: 900px) and (max-width: 1379px) {
   .title {
@@ -792,10 +809,15 @@ a {
     background: white;
   }
 }
-.top-position {
-  position: relative;
-  margin-right: 40px;
-  margin-top: 46px;
+@media (min-width: 1024px) {
+  .top-title {
+    padding: 20px 110px;
+  }
+}
+@media (min-width: 1200px) {
+  .top-title {
+    margin: 50px auto;
+  }
 }
 
 /* Section Menu */
@@ -822,6 +844,13 @@ a {
 }
 @media (min-width: 1200px) {
   .menu {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1200px) {
+  .menu-general {
     margin: auto;
   }
 }
@@ -857,6 +886,11 @@ a {
   /*pour cacher l'animation*/
   overflow: hidden;
 }
+@media (min-width: 1200px) {
+  .meal {
+    margin-bottom: 40px;
+  }
+}
 .meal:hover .meal-icon {
   width: 13%;
 }
@@ -875,6 +909,11 @@ a {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+@media (min-width: 1200px) {
+  .meal-item {
+    width: 320px;
+  }
 }
 .meal-title {
   font-weight: 500;
