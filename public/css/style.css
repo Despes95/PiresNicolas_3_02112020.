@@ -340,7 +340,10 @@ a {
   transition: 0.4s;
 }
 
-#position {
+#position,
+#position-1,
+#position-2,
+#position-3 {
   display: flex;
   left: 85%;
   position: absolute;
@@ -851,7 +854,7 @@ i.fas.fa-heart {
 }
 @media (min-width: 1200px) {
   .menu-general {
-    margin: auto;
+    margin: 0 auto;
   }
 }
 

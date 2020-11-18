@@ -1,14 +1,22 @@
-
-#position {
+#position,
+#position-1,
+#position-2,
+#position-3 {
     display: flex;
     left: 85%;
     position: absolute;
     bottom: 10%;
 }
 
+
 .like {
     position: relative;
 }
+
+
+
+
+
 
 .like .heart {
     color: #3f3f3f;
@@ -29,6 +37,7 @@
 i.far.fa-heart {
     font-size: 30px;
 }
+
 i.fas.fa-heart {
     font-size: 30px;
 }
